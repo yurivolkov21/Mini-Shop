@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "673847018023",
+    "project_id": "mini-shop-f8b3c",
+    "storage_bucket": "mini-shop-f8b3c.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:673847018023:android:9adcf9f1bfb6b70aaf8402",
+        "android_client_info": {
+          "package_name": "com.example.mini_shop"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "673847018023-atm82o5k8vbaroj0mla9jboup2drkrn1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.mini_shop",
+            "certificate_hash": "fb9a70edfecf6bd43834035de2308b33bc6c7f22"
+          }
+        },
+        {
+          "client_id": "673847018023-nsbjmg81itvrtjm6s30biti50bahguv4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBSSIlvNv1LD-t4LqI-hwNb3H8I_B0OQk4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "673847018023-nsbjmg81itvrtjm6s30biti50bahguv4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
