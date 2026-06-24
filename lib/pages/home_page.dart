@@ -5,6 +5,7 @@ import '../auth/auth_api.dart';
 import '../auth/token_store.dart';
 import 'login_page.dart';
 import 'profile_page.dart';
+import 'upload_page.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -44,6 +45,14 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBar(
         title: const Text('MiniShop'),
         actions: [
+          IconButton(
+            icon: const Icon(Icons.cloud_upload),
+            tooltip: 'Upload ảnh',
+            onPressed: () => Navigator.push(
+              context,
+              MaterialPageRoute(builder: (_) => const UploadPage()),
+            ),
+          ),
           IconButton(
             icon: const Icon(Icons.person),
             onPressed: () => Navigator.push(
