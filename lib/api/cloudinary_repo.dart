@@ -11,16 +11,14 @@ class CloudImage {
 }
 
 class CloudinaryRepo {
-  // ⚠️ THAY bằng URL server Node của bạn.
-  // - Máy thật (cùng WiFi với PC): IP LAN máy tính -> 'http://192.168.20.55:3000'
-  // - Android emulator + server local: 'http://10.0.2.2:3000'
-  // - Deploy Render: 'https://minishop-media.onrender.com'
-  static const String baseUrl = 'http://192.168.20.55:3000';
+  // Backend gộp trên Render — KHÔNG có dấu / ở cuối.
+  // Local dev: đổi sang 'http://<IP_LAN>:3000' (máy thật) hoặc 'http://10.0.2.2:3000' (emulator).
+  static const String baseUrl = 'https://mini-shop-api-2dno.onrender.com';
 
   final Dio _dio = Dio(BaseOptions(
     baseUrl: baseUrl,
-    connectTimeout: const Duration(seconds: 15),
-    receiveTimeout: const Duration(seconds: 30),
+    connectTimeout: const Duration(seconds: 60), // Render free cold start ~30-50s
+    receiveTimeout: const Duration(seconds: 60),
   ));
 
   /// Upload 1 ảnh lên server (server đẩy tiếp lên Cloudinary).

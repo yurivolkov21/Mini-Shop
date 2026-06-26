@@ -19,7 +19,10 @@ class _GalleryPageState extends State<GalleryPage> {
   }
 
   void _reload() {
-    setState(() => _future = _repo.listImages());
+    // Block body: KHÔNG để arrow trả về Future (setState cấm) -> rebuild mới chạy.
+    setState(() {
+      _future = _repo.listImages();
+    });
   }
 
   Future<void> _confirmDelete(CloudImage img) async {
@@ -92,7 +95,7 @@ class _GalleryPageState extends State<GalleryPage> {
                   child: Image.network(
                     img.url,
                     fit: BoxFit.cover,
-                    errorBuilder: (_, __, ___) => Container(
+                    errorBuilder: (_, _, _) => Container(
                       color: Colors.grey.shade300,
                       child: const Icon(Icons.broken_image),
                     ),

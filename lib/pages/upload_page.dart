@@ -42,13 +42,13 @@ class _UploadPageState extends State<UploadPage> {
       );
       if (!mounted) return;
       ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text('Upload xong! ' + img.url)),
+        SnackBar(content: Text('Upload xong! ${img.url}')),
       );
       setState(() => _selected = null);
     } catch (e) {
       if (!mounted) return;
       ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text('Lỗi upload: ' + e.toString())),
+        SnackBar(content: Text('Lỗi upload: $e')),
       );
     } finally {
       if (mounted) setState(() => _uploading = false);
